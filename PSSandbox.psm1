@@ -108,7 +108,7 @@ function Use-Sandbox
 }
 
 
-function Start-Game
+function Start-Sandbox
 {
     $Script:InSandbox = $true
     $Script:PowerShell = [powershell]::Create()
@@ -211,6 +211,3 @@ function Invoke-Script
 Set-Alias -Name PSConsoleHostReadline -Value Read-ConsoleHostLine
 Set-Alias -Name TabExpansion2 -Value Expand-Tab
 Set-Alias -Name prompt -Value Show-Prompt
-
-Export-ModuleMember -Function Use-Sandbox, Read-ConsoleHostLine, Expand-Tab, Show-Prompt, Start-Game `
-                    -Alias PSConsoleHostReadline, TabExpansion2, prompt
